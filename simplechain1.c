@@ -1,6 +1,4 @@
-/* Run program 3.1 and observe results for different numbers of processes. Experiment with different values for the command 
-line argument to find largest numbers of processes that the program can generate. Observe the fraction that are dopted by init. */
-
+//Fill in the actual process ID's of the processes in the diagram of figure 3.2 for a run with command line value of 4
 #include <stdio.h> 
 #include <stdlib.h>
 #include <unistd.h> 
@@ -20,8 +18,10 @@ int main (int argc, char *argv[]) {
 	fprintf(stderr, "i:%d process ID:%ld parent ID:%ld child ID:%ld\n", 
 		i, (long)getpid(), (long)getppid(), (long)childpid); 
 	return 0; 
+	if (argc = 4) { 
+		for( i = 0; i < n; i++) {
+			fprintf(stdrr, "My real ID is %5ld\n, (long)getuid()argv[i])
+			n++; 
+		}
+	}
 } 
-
-
-
-

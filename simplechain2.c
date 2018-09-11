@@ -1,6 +1,4 @@
-/* Run program 3.1 and observe results for different numbers of processes. Experiment with different values for the command 
-line argument to find largest numbers of processes that the program can generate. Observe the fraction that are dopted by init. */
-
+/* Put sleep[10} directly before the final fprintf statement in program 3.1. What is the max number of processes generated in this process? */
 #include <stdio.h> 
 #include <stdlib.h>
 #include <unistd.h> 
@@ -17,11 +15,8 @@ int main (int argc, char *argv[]) {
 	for (i = 1; i < n; i++) 
 		if (childpid = fork()) 
 			break; 
+	sleep(10); 
 	fprintf(stderr, "i:%d process ID:%ld parent ID:%ld child ID:%ld\n", 
 		i, (long)getpid(), (long)getppid(), (long)childpid); 
 	return 0; 
 } 
-
-
-
-

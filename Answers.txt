@@ -1,0 +1,116 @@
+﻿3.  Modify to take several command line arguments through getopt. Program should take three options, either -n x, -h, or -p.
+The -h option should display a help message indicating the type of input it expects and then the program should terminate
+If it takes -n x, it should store the x into a variable for use for the rest of the program. If it receives -p as an option it should use perror to generate a test error message as described in next task.
+  
+
+
+
+
+
+4. Generate error messages by my_prog: Error: Detailed error message using perror. Where my_prog is the name of the executable
+(argv[0] that you are trying to execute. This should not be hardcoded. */
+
+
+5. 
+  1 
+/* Run program 3.1 and observe results for different numbers of processes.
+The i numbers each process. ID seems to start with 17 and have different numbers depending on the process. But, the next one seems to be in order. The parent ID seems to start with the same address. Child ID starts with 17. Every once in a while there is a festerva@hoare line. Seems to be a parent ID of 1 on occasion. 
+  
+
+  
+
+2. 
+
+
+  
+
+  
+
+
+
+3.  Experiment with different values for the command. 
+line argument to find largest numbers of processes that the program can generate. Observe the fraction that are adopted by init. */
+This one was with max at 100, but I was told in class the max should be 30.  Skipped some screenshots in the middle.  Seems to be some variation to the order of the messages. 
+  
+
+  
+
+  
+
+
+
+4. /* Put sleep[10} directly before the final fprintf statement in program 3.1. What is the max number of processes generated in this process? */
+It waited for a while and then did this.I noticed there are two 1s together in the parent ID. The max processes is messed up currently on the server. 
+  
+
+
+
+5. 
+/*Put loop around the final fprintf in program 3.1. Have the loop execute k times. Put sleep(m); inside the loop after the fprintf.
+pass ka nad m on the command line. Run the program for several values of n, k and m and observe the results.
+It ran 10 processes for k times. Some of them seem out of order. Perhaps the sleep interrupted the order. 
+
+
+  
+
+  
+
+
+
+6. 
+/*Modify program 3.1 by putting a wait function call before the final fprintf statement. Does this affect the output of the program?*/
+It made the processes come out of order because the parent waited for a child. 
+  
+
+
+
+
+
+
+
+7. /*Replace the final fprintf statement with four fprintf statements, one for each four integers displayed.
+Onely the last one should output a newline. What happens when you run this? Can you tell which process generates each part of the
+output? Run the program several times and see if there is a difference in output 
+  
+
+  
+
+Try without labeling what it is. 
+  
+
+Nope, can’t tell
+
+
+
+
+
+
+/* replace final fprintf statement with a loop that reads nchars characters from a standard input, one character at a time and puts them in an
+array called mybuf. The values of n and nchars should be passed as command line arguments. After the loop put a '\0'
+character in entry nchars of the array so that it contains a string. Output to standard error in a single fpintf the process ID followed
+by the string in mybuff. Run the program for several values of n and nchars. Observe results. Press the return key often and continuing typing
+at the keyboard until all the processes have exited */
+  
+.
+
+
+  
+
+This is with instructions of continuing typing and return key often. First line is what is expected, but continues to do something after randomly. 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Git

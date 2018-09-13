@@ -16,20 +16,15 @@ pid_t childpid = 0;
 char charactor;
 int i, n, argument;
 
-	if (argc != 2){
-		fprintf(stderr, "Usage: %s processes\n", argv[0]);
-	return 1;
-    }
-
 n = atoi(argv[1]);
 argument = atoi(argv[2]);
 char *mybuf = (char*)malloc(sizeof(char)*(argument+1));
 
-	for(i = 1; i < n; i++)
-	if (childpid = fork())
+	for(i = 1; i < n; i++){
+		if (childpid = fork())
 		break;
-	
-	//char loop
+	}
+
 	for(i = 0; i < argument; i++){
 		scanf(" %c", &charactor);
 		mybuf[i] = charactor;

@@ -14,10 +14,6 @@ int main (int argc, char *argv[]) {
     printf("\nEnter value for m: ");
      scanf( "%i", &m);
 	 
-	if (argc != 2) { /* check for valid number of command-line arguments */ 
-	   fprintf(stderr, "Usage: %s processes \n", argv[0]); 
-	   return 1; 
-     }
 	n = atoi(argv[1]); 
 	for (i = 1; i < n; i++) 
 		if (childpid = fork()) 

@@ -8,22 +8,35 @@ Generate error messages by my_prog: Error: Detailed error message using perror. 
 #include <stdio.h> 
 #include <stdlib.h>
 #include <unistd.h> 
+#include <string.h> 
+#include <ctype.h> 
 
 int main (int argc, char *argv[]) { 
 	pid_t childpid = 0; 
-	int i, n; 
+	int i,c,x;   
+       
   
-	if (argc != 2) { /* check for valid number of command-line arguments */ 
-	   fprintf(stderr, "Usage: %s processes \n", argv[0]); 
-	   return 1; 
-     }
-	n = atoi(argv[1]); 
-	for (i = 1; i < n; i++) 
+     while ((c = getopt (argc, argv, "hpn:")) != -1)
+      switch (c) {
+        case 'h':
+	  printf("Please enter n and  an integer value (For example n 10)");  
+	  break; 
+        case 'p':
+         fprintf(stderr, "%s  error:", argv[0]);   
+          perror( "");
+          break; 
+        case 'n':
+            x = atoi(argv[2]); 
+	     for (i = 1; i < x; i++) 
 		if (childpid = fork()) 
-			break; 
-	fprintf(stderr, "i:%d process ID:%ld parent ID:%ld child ID:%ld\n", 
+		break; 
+	  fprintf(stderr, "i:%d process ID:%ld parent ID:%ld child ID:%ld\n", 
 		i, (long)getpid(), (long)getppid(), (long)childpid); 
-		return 0; 
+         default: 
+		abort(); 
+      }
+    
+return 0;  
 } 
 
 

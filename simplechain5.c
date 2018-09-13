@@ -18,10 +18,10 @@ int main (int argc, char *argv[]) {
 	for (i = 1; i < n; i++) 
 		if (childpid = fork()) 
 			break; 
-	fprintf(stderr, "i:%d process", i); 
-	fprintf(stderr, "ID:%d process",  (long)getpid()); 
-	fprintf(stderr, "Parent Id:%d process",  (long)getppid()); 
-	fprintf(stderr, " Child ID:%d process\n",  (long)childpid()); 
+	fprintf(stderr, "%d", i); 
+	fprintf(stderr, "%d",  (long)getpid()); 
+	fprintf(stderr, "%d",  (long)getppid()); 
+	fprintf(stderr, "%d\n",  (long)childpid); 
 	
 	 return 0; 
 } 

@@ -20,7 +20,7 @@ int main (int argc, char *argv[]) {
 	return 0; 
 	if (argc = 4) { 
 		for( i = 0; i < n; i++) {
-			fprintf(stdrr, "My real ID is %5ld\n, (long)getuid()argv[i])
+			fprintf(stderr, "My real ID is %5ld\n", (long)getuid(),argv[i]);
 			n++; 
 		}
 	}

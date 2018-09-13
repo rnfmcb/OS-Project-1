@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <unistd.h> 
 #include <sys/wait.h> 
+#include "restart.h" 
 
 int main (int argc, char *argv[]) { 
 	pid_t childpid = 0; 
@@ -14,9 +15,10 @@ int main (int argc, char *argv[]) {
      }
 	n = atoi(argv[1]); 
 	for (i = 1; i < n; i++) 
-		if (childpid = fork()) 
-			break; 
-	while(r_wait(NULL) > 0); //Wait for all the children
+		if (childpid = fork()<= 0) 
+			break;
+        //Wait function call  
+	wait(NULL); 
 	fprintf(stderr, "i:%d process ID:%ld parent ID:%ld child ID:%ld\n", 
 		i, (long)getpid(), (long)getppid(), (long)childpid); 
 	return 0; 
